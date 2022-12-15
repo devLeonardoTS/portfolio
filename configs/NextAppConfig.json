@@ -1,0 +1,30 @@
+{
+	"envs": {
+		"production": {
+			"reactStrictMode": true,
+			"swcMinify": true,
+			"images": {
+				"loader": "cloudinary",
+				"path": "*"
+			},
+			"basePath": "/portfolio",
+			"assetPrefix": "/portfolio/"
+		},
+		"development": {
+			"reactStrictMode": true,
+			"swcMinify": true,
+			"images": {
+				"loader": "cloudinary",
+				"path": "*"
+			}
+		},
+		"test": {
+			"reactStrictMode": true,
+			"swcMinify": true,
+			"images": {
+				"loader": "cloudinary",
+				"path": "*"
+			}
+		}
+	}
+}
