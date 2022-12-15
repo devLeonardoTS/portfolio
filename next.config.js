@@ -15,5 +15,4 @@ function getNextAppConfig(env) {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = getNextAppConfig(process.env.NODE_ENV);
-console.log(nextConfig);
 module.exports = nextConfig;
