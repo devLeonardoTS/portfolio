@@ -9,7 +9,7 @@
 
 Este é o código-fonte do projeto que construí para dizer _"<u>**hello-world!**</u>"_ de uma maneira mais apropriada para você, que está sempre atento ao vasto mundo das tecnologias da informação e comunicação.
 
-Se você chegou até aqui, provavelmente já vistou o [meu portólio](#) e visualizou alguns dos meus projetos ou publicações, e agora está curioso para saber como o website foi construido. Então se esse é o seu objetivo, nas seções abaixo veremos exatamente isso!
+Se você chegou até aqui, provavelmente já vistou o [meu portfólio](https://devleonardots.github.io/portfolio/) e visualizou alguns dos meus projetos ou publicações, e agora está curioso para saber como o website foi construido. Se esse é o seu objetivo, nas seções abaixo veremos exatamente isso!
 
 <br>
 
