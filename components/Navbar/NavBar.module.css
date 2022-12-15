@@ -1,0 +1,27 @@
+.container {
+	@apply fixed w-full h-[var(--navbar-h)] z-50;
+	@apply bg-clr-primary;
+	@apply shadow-sm;
+	@apply transition-transform;
+	/* @apply -translate-y-full; */
+}
+
+.container + * > :first-child {
+	@apply pt-[var(--navbar-h)];
+}
+
+.content {
+	@apply flex h-full items-center justify-between px-4;
+}
+
+.interactions {
+	@apply flex gap-2 items-center;
+}
+
+.linksMenu {
+	@apply flex gap-2 list-none;
+}
+
+.linksMenu [data-active] {
+	@apply font-bold;
+}

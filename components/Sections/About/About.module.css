@@ -1,0 +1,8 @@
+.container {
+	@apply flex flex-col min-h-screen;
+}
+
+.content {
+	@apply grow p-4;
+	@apply flex flex-col justify-center items-center;
+}
