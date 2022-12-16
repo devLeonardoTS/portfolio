@@ -1,5 +1,9 @@
+import EnvVars from "./EnvVars";
+
+
 const AssetPaths = {
-    baseBg: "/assets/images/bg-pattern.svg"
+    base: EnvVars.basePath,
+    favIcon: `${EnvVars.basePath}/favicon.ico`
 }
 
 export default AssetPaths;

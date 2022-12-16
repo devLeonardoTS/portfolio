@@ -1,0 +1,8 @@
+.container {
+	@apply fixed z-40;
+	@apply bottom-8 right-8;
+}
+
+.content {
+	@apply flex flex-col justify-center items-center gap-2;
+}

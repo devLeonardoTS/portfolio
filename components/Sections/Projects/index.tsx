@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import NavigationStore from "../../../stores/NavigationStore";
 import createNavData from "../../../utils/createNavData";

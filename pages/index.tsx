@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import About from "../components/Sections/About";
 import Details from "../components/Sections/Details";
 import Projects from "../components/Sections/Projects";
+import AssetPaths from "../data/AssetPaths";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
 						"Welcome to my portfolio page, glad to see you here."
 					}
 				/>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href={AssetPaths.favIcon} />
 			</Head>
 
 			<main className={styles.container}>

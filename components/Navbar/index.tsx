@@ -1,11 +1,9 @@
-import IconButton from "@mui/material/IconButton";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
-import { BiMenu } from "react-icons/bi";
+import PageHrefs from "../../data/PageHrefs";
 import useScrollY from "../../hooks/useScrollY";
-import NavigationStore from "../../stores/NavigationStore";
 import handleSmoothScrolling from "../../utils/handleSmoothScroll";
-
+import NavLink from "../NavLink";
 import styles from "./NavBar.module.css";
 
 type NavbarProps = {};
@@ -13,7 +11,6 @@ type NavbarProps = {};
 const Navbar = ({}: NavbarProps) => {
 	const navContainerRef = useRef<HTMLElement | null>(null);
 	const navLinksMenuRef = useRef<HTMLElement | null>(null);
-	const { current: currentPage } = NavigationStore();
 
 	const [onSDTimer, setOnSDTimer] = useState<NodeJS.Timeout>();
 
@@ -33,69 +30,43 @@ const Navbar = ({}: NavbarProps) => {
 		},
 	});
 
-	useEffect(() => {
-		if (!currentPage || !navLinksMenuRef.current) {
-			return;
-		}
-
-		const linksMenuNode = navLinksMenuRef.current;
-
-		linksMenuNode.childNodes.forEach(node => {
-			const list = node as HTMLLIElement;
-			const anchor = list.firstChild as HTMLAnchorElement;
-
-			if (!anchor) {
-				return;
-			}
-
-			const anchorHref = anchor.getAttribute("href");
-			if (currentPage.href === anchorHref) {
-				list.dataset["active"] = "";
-			} else {
-				delete list.dataset["active"];
-			}
-
-			// console.log("Anchor?", anchor.getAttribute("href"));
-		});
-	}, [currentPage]);
-
 	return (
 		<nav className={styles.container} ref={navContainerRef}>
 			<div className={styles.content}>
 				<div className={styles.logo}>
-					<a href="/">{"DevLTS Logo"}</a>
+					<NavLink href={PageHrefs.home}>{"DevLTS Logo"}</NavLink>
 				</div>
 				<div className={styles.interactions}>
 					<menu className={styles.linksMenu} ref={navLinksMenuRef}>
 						<li>
-							<a
+							<NavLink
 								onClick={ev =>
 									handleSmoothScrolling(ev, "projects")
 								}
 								href="#projects"
 							>
 								Projects
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a
+							<NavLink
 								onClick={ev =>
 									handleSmoothScrolling(ev, "details")
 								}
 								href="#details"
 							>
 								Details
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a
+							<NavLink
 								onClick={ev =>
 									handleSmoothScrolling(ev, "about")
 								}
 								href="#about"
 							>
 								About
-							</a>
+							</NavLink>
 						</li>
 					</menu>
 

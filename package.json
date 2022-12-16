@@ -8,7 +8,7 @@
 	"scripts": {
 		"dev": "next dev -p 3001",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -p 3001",
 		"export": "next build && next export",
 		"lint": "next lint"
 	},
@@ -21,6 +21,7 @@
 		"dayjs": "^1.11.7",
 		"eslint": "8.29.0",
 		"eslint-config-next": "13.0.6",
+		"framer-motion": "^7.10.2",
 		"lodash": "^4.17.21",
 		"nanoid": "^4.0.0",
 		"next": "13.0.6",

@@ -1,5 +1,7 @@
+import EnvVars from "./EnvVars";
+
 const PageHrefs = {
-    home: "/"
+    home: `${EnvVars.basePath}/`,
 }
 
 export default PageHrefs;
