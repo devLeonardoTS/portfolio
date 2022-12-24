@@ -5,8 +5,10 @@ import React from "react";
 import styles from "./LoadingIndicator.module.css";
 
 type LoadingIndicatorProps = {
-	id?: string;
 	isLoading: boolean;
+	id?: string;
+	className?: string;
+	message?: string;
 };
 
 const LoadingIndicator = ({
@@ -16,7 +18,7 @@ const LoadingIndicator = ({
 	if (isLoading) {
 		return (
 			<motion.div
-				className={styles.container}
+				className={props.className ?? styles.container}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ ease: "easeInOut", duration: 0.8 }}
@@ -25,7 +27,7 @@ const LoadingIndicator = ({
 				<div className={styles.content}>
 					<CircularProgress />
 					<p>
-						<small>Loading...</small>
+						<small>{props.message ?? "Loading..."}</small>
 					</p>
 				</div>
 			</motion.div>

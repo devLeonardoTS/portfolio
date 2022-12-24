@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 import NavigationStore from "../../../stores/NavigationStore";
 import createNavData from "../../../utils/createNavData";
+import Carousel from "./Carousel";
 import styles from "./Projects.module.css";
 
 type ProjectsProps = {
@@ -23,10 +24,7 @@ const Projects = ({ id }: ProjectsProps) => {
 	return (
 		<section id={id} className={styles.container} ref={sectionElRef}>
 			<div className={styles.content}>
-				<h1>{`Hello world...`}</h1>
-				<h2>
-					{`I'm the`} <strong>{`Hero Section!`}</strong>
-				</h2>
+				<Carousel />
 			</div>
 		</section>
 	);

@@ -5,7 +5,7 @@ interface UseIntersectionObserverArgs extends IntersectionObserverInit {
     onLeave?: () => Promise<void> | void;
 }
 
-const useIntersectionObserver = (elRef: RefObject<Element>, args?: UseIntersectionObserverArgs) => {
+const useIntersectionObserver = (elRef: RefObject<HTMLElement>, args?: UseIntersectionObserverArgs) => {
 
     const { threshold, root, rootMargin, onEnter, onLeave } = args || {};
     const [entry, setEntry] = useState<IntersectionObserverEntry>();
@@ -26,6 +26,8 @@ const useIntersectionObserver = (elRef: RefObject<Element>, args?: UseIntersecti
         const observer = new IntersectionObserver(([entry]) => {
             setEntry(() => entry);
 
+            if (!entry.isIntersecting) { return; }
+
             if (Array.isArray(threshold)) {
                 const exitThreshold = Math.min(...threshold);
                 const enterThreshold = Math.max(...threshold);
@@ -39,7 +41,15 @@ const useIntersectionObserver = (elRef: RefObject<Element>, args?: UseIntersecti
                     if (config.onEnter) { config.onEnter() }
                     return;
                 }
+
+                return;
             }
+
+            if (config.onEnter) {
+                config.onEnter();
+                return;
+            }
+
 
         }, config);
 
