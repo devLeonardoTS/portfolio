@@ -1,0 +1,9 @@
+.slidesBox {
+	@apply w-full overflow-auto;
+}
+
+.slidesBox::-webkit-scrollbar {
+	display: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}

@@ -1,0 +1,31 @@
+.nav {
+	@apply w-full;
+	@apply list-none p-0;
+	@apply flex flex-nowrap justify-between items-center;
+}
+
+.nav .button {
+	@apply flex w-[30px] h-[30px] items-center justify-center p-0 m-0;
+}
+
+.nav .navList {
+	@apply flex flex-nowrap gap-8 p-0;
+}
+
+.nav .navList .item {
+	@apply w-[20px] h-[20px];
+	@apply flex flex-col justify-center items-center;
+}
+
+.nav .navList .item .button .icon {
+	content: "";
+	@apply w-[10px] h-[10px];
+	@apply bg-[#E6E6E6] rounded-full;
+}
+
+.nav .navList .item[data-active] .button .icon {
+	content: "";
+	@apply w-[10px] h-[10px];
+	@apply bg-[#E6E6E6] rounded-full;
+	@apply border-2 border-solid border-black;
+}

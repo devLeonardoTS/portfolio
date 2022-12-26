@@ -1,75 +1,8 @@
 .container {
 	@apply w-full overflow-hidden;
 }
+
 .content {
 	@apply w-full;
 	@apply flex flex-col gap-4;
-}
-
-.slidesBox {
-	@apply w-full overflow-auto;
-}
-
-.slidesBox::-webkit-scrollbar {
-	display: none;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-}
-
-.slides {
-	@apply list-none p-0 m-0;
-	@apply flex flex-nowrap;
-}
-
-.slides::before,
-.slides::after {
-	content: "";
-	@apply flex justify-center items-center;
-	@apply min-w-[76.5%] max-w-[76.5%] aspect-video overflow-auto;
-	@apply rounded;
-	@apply invisible;
-}
-
-.slides .item {
-	@apply flex justify-center items-center;
-	@apply min-w-[76.5%] max-w-[76.5%] aspect-video overflow-auto;
-	@apply bg-[#E6E6E6] rounded;
-	@apply drop-shadow-md shadow-black;
-	@apply mx-[-5%];
-}
-
-.slides .item img {
-	@apply w-full h-full object-cover object-center;
-}
-
-.nav {
-	@apply w-full;
-	@apply list-none p-0;
-	@apply flex flex-nowrap justify-between items-center;
-}
-
-.nav .button {
-	@apply flex w-[30px] h-[30px] items-center justify-center p-0 m-0;
-}
-
-.nav .navList {
-	@apply flex flex-nowrap gap-8 p-0;
-}
-
-.nav .navList .item {
-	@apply w-[20px] h-[20px];
-	@apply flex flex-col justify-center items-center;
-}
-
-.nav .navList .item .button .icon {
-	content: "";
-	@apply w-[10px] h-[10px];
-	@apply bg-[#E6E6E6] rounded-full;
-}
-
-.nav .navList .item[data-active] .button .icon {
-	content: "";
-	@apply w-[10px] h-[10px];
-	@apply bg-[#E6E6E6] rounded-full;
-	@apply border-2 border-solid border-black;
 }

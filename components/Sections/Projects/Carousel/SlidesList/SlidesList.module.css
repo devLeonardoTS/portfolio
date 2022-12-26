@@ -1,0 +1,25 @@
+.slides {
+	@apply list-none p-0 m-0;
+	@apply flex flex-nowrap;
+}
+
+.slides::before,
+.slides::after {
+	content: "";
+	@apply flex justify-center items-center;
+	@apply min-w-[76.5%] max-w-[76.5%] aspect-video overflow-auto;
+	@apply rounded;
+	@apply invisible;
+}
+
+.slides .item {
+	@apply flex justify-center items-center;
+	@apply min-w-[76.5%] max-w-[76.5%] aspect-video overflow-auto;
+	@apply bg-[#E6E6E6] rounded;
+	@apply drop-shadow-md shadow-black;
+	@apply mx-[-5%];
+}
+
+.slides .item img {
+	@apply w-full h-full object-cover object-center;
+}
