@@ -1,8 +1,8 @@
 .container {
+	@apply flex justify-center;
 	@apply w-full overflow-hidden;
 }
 
 .content {
-	@apply w-full;
-	@apply flex flex-col gap-4;
+	@apply w-full flex flex-col gap-4;
 }

@@ -46,22 +46,31 @@ function createProject(data: ProjectData): ProjectData {
     return { ...data, id: nanoid() }
 }
 
-const ProjectStore = create<ProjectStoreState & ProjectStoreActions>((set, get) => {
+const projects: ProjectData[] = [
+    createProject({
+        title: "Project 01",
+        heroImg: AssetPaths.slidePlaceholderImg,
+        category: "Web",
+        devRole: "Designer & Developer",
+        objective: "Deliver a pleasant experience for either, desktop and mobile users."
+    }),
+    createProject({
+        title: "Project 02",
+        heroImg: AssetPaths.slidePlaceholderImg,
+        category: "Web API",
+        devRole: "Designer & Developer",
+        objective: "Grant a reliable source of data and processes to our clients."
+    }),
+    createProject({
+        title: "Project 03",
+        heroImg: AssetPaths.slidePlaceholderImg,
+        category: "Full-stack",
+        devRole: "Designer & Developer",
+        objective: "Ensure our clients are presenting the best of their businesses through digital means."
+    }),
+];
 
-    const projects: ProjectData[] = [
-        createProject({
-            title: "Project 01",
-            heroImg: AssetPaths.slidePlaceholderImg
-        }),
-        createProject({
-            title: "Project 02",
-            heroImg: AssetPaths.slidePlaceholderImg
-        }),
-        createProject({
-            title: "Project 03",
-            heroImg: AssetPaths.slidePlaceholderImg
-        }),
-    ];
+const ProjectStore = create<ProjectStoreState & ProjectStoreActions>((set, get) => {
 
     function setActiveProject(index: number) {
         set({ activeProject: index });

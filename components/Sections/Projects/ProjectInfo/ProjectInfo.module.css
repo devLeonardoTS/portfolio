@@ -1,0 +1,33 @@
+.container {
+	@apply w-full;
+}
+
+.content {
+	@apply flex flex-col items-center gap-[32px];
+}
+
+.infoCard {
+	@apply w-full p-2 rounded;
+	@apply flex flex-col gap-4;
+	@apply text-center;
+	@apply bg-clr-secondary bg-opacity-20;
+}
+
+.infoCard p span {
+	@apply font-bold;
+}
+
+.cta button {
+	@apply p-2 rounded;
+	@apply uppercase;
+	@apply bg-clr-accent text-clr-primary;
+}
+
+.accentBox {
+	@apply absolute -z-10 right-0;
+	@apply translate-x-[20%] translate-y-[-30%];
+}
+
+.accentBox img {
+	@apply opacity-10;
+}

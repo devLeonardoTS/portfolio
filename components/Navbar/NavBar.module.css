@@ -6,9 +6,9 @@
 	/* @apply -translate-y-full; */
 }
 
-.container + * > :first-child {
+/* .container + * > :first-child {
 	@apply pt-[var(--navbar-h)];
-}
+} */
 
 .content {
 	@apply flex h-full items-center justify-between px-4;
