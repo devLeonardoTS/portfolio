@@ -4,5 +4,6 @@
 
 .content {
 	@apply grow p-4;
-	@apply flex flex-col justify-center items-center gap-[32px];
+	@apply flex flex-col justify-center items-center gap-[32px] self-center;
+	@apply md:w-[70%] lg:w-[50%];
 }

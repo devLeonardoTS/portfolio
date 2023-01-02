@@ -1,5 +1,5 @@
 .container {
-	@apply w-full;
+	@apply relative w-full;
 }
 
 .content {
@@ -10,7 +10,7 @@
 	@apply w-full p-2 rounded;
 	@apply flex flex-col gap-4;
 	@apply text-center;
-	@apply bg-clr-secondary bg-opacity-20;
+	@apply bg-clr-secondary bg-opacity-50;
 }
 
 .infoCard p span {
@@ -18,14 +18,14 @@
 }
 
 .cta button {
-	@apply p-2 rounded;
-	@apply uppercase;
-	@apply bg-clr-accent text-clr-primary;
+	@apply m-4 p-2 rounded;
+	@apply uppercase font-bold;
+	@apply bg-clr-accent text-black;
 }
 
 .accentBox {
-	@apply absolute -z-10 right-0;
-	@apply translate-x-[20%] translate-y-[-30%];
+	@apply absolute right-0 -z-10;
+	@apply translate-y-[-30%];
 }
 
 .accentBox img {

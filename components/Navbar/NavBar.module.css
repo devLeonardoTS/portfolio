@@ -1,6 +1,6 @@
 .container {
 	@apply fixed w-full h-[var(--navbar-h)] z-10;
-	@apply bg-clr-primary;
+	@apply bg-clr-secondary bg-opacity-75;
 	@apply shadow-sm;
 	@apply transition-transform;
 	/* @apply -translate-y-full; */

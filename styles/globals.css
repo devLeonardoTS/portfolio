@@ -9,7 +9,7 @@
 }
 
 * {
-	@apply text-clr-secondary;
+	@apply text-black;
 	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 	padding: 0;
@@ -41,7 +41,11 @@ small {
 	@apply text-sm;
 }
 
+a,
+a * {
+	@apply transition-all ease-in-out;
+}
 a:hover,
 a:hover * {
-	@apply text-clr-accent brightness-110;
+	@apply scale-110 transition-all ease-in-out;
 }

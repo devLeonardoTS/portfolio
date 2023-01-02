@@ -4,5 +4,5 @@
 }
 
 .content {
-	@apply w-full flex flex-col gap-4;
+	@apply w-full flex flex-col self-center gap-4;
 }

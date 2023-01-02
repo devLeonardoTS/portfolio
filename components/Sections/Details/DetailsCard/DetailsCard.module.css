@@ -1,0 +1,35 @@
+.container {
+	@apply flex flex-col min-h-[285px] max-h-[285px];
+}
+
+.content {
+	@apply grow max-w-full max-h-full overflow-hidden;
+	@apply grid grid-cols-[75%_1fr] grid-flow-dense;
+}
+
+.content.reverse {
+	@apply grid grid-cols-[1fr_75%] grid-flow-dense;
+}
+
+.content .txtBox {
+	@apply flex flex-col gap-4;
+	@apply p-8;
+	@apply overflow-auto;
+	@apply break-all;
+}
+
+.content .txtBox h3 {
+	@apply uppercase;
+}
+
+.content .sideImgBox img {
+	@apply w-full h-full object-cover object-left;
+}
+
+.content.reverse > :first-child {
+	@apply order-last;
+}
+
+.content.reverse .sideImgBox img {
+	@apply object-right;
+}

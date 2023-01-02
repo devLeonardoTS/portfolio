@@ -1,0 +1,22 @@
+.container {
+	@apply flex flex-col;
+}
+
+.content {
+	@apply flex flex-col gap-10;
+}
+
+.content .txtBox {
+	@apply self-center;
+	@apply flex flex-col gap-8;
+	@apply text-center;
+	@apply max-w-[50%];
+}
+
+.content .txtBox .text {
+	@apply flex flex-col gap-4;
+}
+
+.bold {
+	@apply font-bold;
+}

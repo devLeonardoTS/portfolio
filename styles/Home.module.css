@@ -1,4 +1,4 @@
 .container {
-	@apply relative overflow-hidden;
-	@apply grow;
+	@apply relative;
+	@apply grow max-w-5xl self-center;
 }

@@ -20,9 +20,9 @@ module.exports = {
 		colors: {
 			black: "black",
 			white: "white",
-			"clr-primary": "#FDFEFE",
-			"clr-secondary": "#101116",
-			"clr-accent": "#587099",
+			"clr-primary": "#8AAEDC",
+			"clr-secondary": "#B1C9E8",
+			"clr-accent": "#ffd39a",
 		},
 	},
 	plugins: [require("@tailwindcss/line-clamp")],

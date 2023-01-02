@@ -15,7 +15,7 @@ const Projects = ({ id }: ProjectsProps) => {
 	const sectionElRef = useRef<HTMLElement | null>(null);
 
 	useIntersectionObserver(sectionElRef, {
-		threshold: [0.1, 0.6],
+		threshold: 0.1,
 		onEnter: () =>
 			setNavCurrent(
 				createNavData({ href: "#projects", name: "Projects" })

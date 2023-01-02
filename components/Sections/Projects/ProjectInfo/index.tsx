@@ -1,7 +1,9 @@
 import { ButtonBase } from "@mui/material";
 import React, { useRef } from "react";
+import SmoothScrollConfig from "../../../../configs/SmoothScrollConfig";
 import AssetPaths from "../../../../data/AssetPaths";
 import ProjectStore from "../../../../stores/ProjectStore";
+import NavLink from "../../../NavLink";
 import styles from "./ProjectInfo.module.css";
 
 type ProjectInfoProps = {};
@@ -10,6 +12,16 @@ const ProjectInfo = ({ ...props }: ProjectInfoProps) => {
 	const { projects, activeProject } = ProjectStore();
 
 	const project = projects?.[activeProject || 0] || {};
+
+	const handleSeeMoreClick: React.MouseEventHandler<
+		HTMLAnchorElement
+	> = ev => {
+		ev.preventDefault();
+		const detailsNode = document.getElementById("details");
+		if (detailsNode) {
+			detailsNode.scrollIntoView(SmoothScrollConfig);
+		}
+	};
 
 	return (
 		<div className={styles.container}>
@@ -34,13 +46,18 @@ const ProjectInfo = ({ ...props }: ProjectInfoProps) => {
 					</div>
 				</div>
 				<div className={styles.cta}>
-					<ButtonBase>See more</ButtonBase>
+					<NavLink
+						onClick={ev => handleSeeMoreClick(ev)}
+						href="#details"
+					>
+						<ButtonBase>See more</ButtonBase>
+					</NavLink>
 				</div>
 				<div className={styles.accentBox}>
 					<img
 						className={styles.accent_01}
 						src={AssetPaths.accentProjectsDesign}
-						alt="Project Info's illustration image"
+						alt=""
 					/>
 				</div>
 			</div>

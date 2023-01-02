@@ -1,8 +1,30 @@
 .container {
-	@apply flex flex-col min-h-screen;
+	@apply flex flex-col;
 }
 
 .content {
-	@apply grow p-4;
-	@apply flex flex-col justify-center items-center;
+	@apply grow py-10;
+	@apply flex flex-col gap-10;
+}
+
+.cta {
+	@apply w-full flex justify-center;
+}
+
+.cta button {
+	@apply m-4 p-2 rounded;
+	@apply uppercase font-bold;
+	@apply bg-clr-accent text-black;
+}
+
+.link {
+	@apply font-bold;
+}
+.link:hover {
+	@apply border-b -m-[1px];
+}
+
+.content .cards {
+	@apply relative w-full overflow-hidden;
+	@apply flex flex-col gap-10;
 }

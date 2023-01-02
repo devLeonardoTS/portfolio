@@ -1,0 +1,4 @@
+.divider {
+	@apply max-w-[50%] w-full m-auto;
+	@apply text-[#e6e6e6];
+}

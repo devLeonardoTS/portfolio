@@ -1,0 +1,52 @@
+.content {
+	@apply flex flex-col gap-[32px];
+}
+
+.sectionTitle {
+	@apply relative;
+	@apply flex justify-center items-center;
+}
+
+.sectionTitle .txtBox {
+	@apply flex justify-center items-center;
+	@apply px-4;
+	@apply w-full min-h-[3.19em];
+	@apply overflow-hidden;
+	@apply bg-clr-secondary;
+	clip-path: polygon(100% 0, 90% 100%, 0 100%, 0 0);
+}
+
+.sectionTitle .txtBox h2 {
+	@apply max-w-[90%] overflow-hidden text-ellipsis;
+	@apply text-center uppercase font-bold;
+}
+
+.sectionTitle .illustration {
+	@apply absolute h-[122px] w-[122px];
+	@apply -left-0 -translate-x-1/2;
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.sectionTitle .illustration img {
+	@apply h-full w-full object-cover;
+}
+
+.contentTitle {
+	@apply px-4;
+	@apply flex flex-col gap-[32px];
+}
+
+.contentTitle h2 {
+	@apply overflow-hidden text-ellipsis;
+	@apply text-center;
+}
+
+.contentTitle h3 {
+	@apply overflow-hidden text-ellipsis;
+	@apply text-center font-light;
+}
+
+.contentTitle hr {
+	@apply w-[50%] m-auto;
+	@apply text-clr-secondary;
+}
