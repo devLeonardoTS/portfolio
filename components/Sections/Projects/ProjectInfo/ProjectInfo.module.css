@@ -10,7 +10,7 @@
 	@apply w-full p-2 rounded;
 	@apply flex flex-col gap-4;
 	@apply text-center;
-	@apply bg-clr-secondary bg-opacity-50;
+	@apply bg-clr-primary bg-opacity-50;
 }
 
 .infoCard p span {
@@ -25,9 +25,9 @@
 
 .accentBox {
 	@apply absolute right-0 -z-10;
-	@apply translate-y-[-30%];
+	@apply translate-y-[-30%] pointer-events-none select-none;
 }
 
 .accentBox img {
-	@apply opacity-10;
+	@apply opacity-10 pointer-events-none select-none;
 }

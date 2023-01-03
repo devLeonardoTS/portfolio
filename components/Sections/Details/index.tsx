@@ -43,22 +43,26 @@ const Details = ({ id }: DetailsProps) => {
 					{project?.details ? (
 						<React.Fragment>
 							<DetailsCard
-								title="The challenge"
+								key={"card-01"}
+								title="Challenges"
 								richText={project?.details?.challenge}
 								sideImg={project?.showcaseImgs?.[0]}
 							/>
 							<DetailsCard
-								title="The solution"
+								key={"card-02"}
+								title="Solutions & Conclusions"
 								richText={project?.details?.solution}
 								sideImg={project?.showcaseImgs?.[1]}
 								isReverse
 							/>
 							<DetailsCard
+								key={"card-03"}
 								title="Features"
 								richText={project?.details?.features}
 								sideImg={project?.showcaseImgs?.[2]}
 							/>
 							<DetailsCard
+								key={"card-04"}
 								title="Colaborators"
 								richText={project?.details?.colaborators}
 								sideImg={project?.showcaseImgs?.[3]}
@@ -73,6 +77,7 @@ const Details = ({ id }: DetailsProps) => {
 					) : (
 						<React.Fragment>
 							<DetailsCard
+								key={"card-00"}
 								title="Work in Progress"
 								richText={`<p>&#128119; This project is still under development, check my <a href="https://github.com/devLeonardoTS" class=${styles.link}>GitHub</a> to learn about how it is going.</p>`}
 								isReverse

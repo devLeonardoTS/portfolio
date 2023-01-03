@@ -19,7 +19,20 @@
 }
 
 .content .txtBox h3 {
-	@apply uppercase;
+	@apply font-bold uppercase;
+}
+
+.content .txtBox ul {
+	@apply flex flex-col gap-1;
+	@apply px-5;
+}
+
+.content .txtBox a:hover {
+	@apply border-b -my-[1px];
+}
+
+.content .sideImgBox {
+	@apply rounded overflow-hidden;
 }
 
 .content .sideImgBox img {

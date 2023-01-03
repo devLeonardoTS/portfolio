@@ -1,3 +1,4 @@
+import { motion, useAnimation, Variants } from "framer-motion";
 import React, { useRef } from "react";
 import AssetPaths from "../../../data/AssetPaths";
 import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
@@ -16,11 +17,25 @@ type AboutProps = {
 const About = ({ id }: AboutProps) => {
 	const { setNavCurrent, current, previous } = NavigationStore();
 	const sectionElRef = useRef<HTMLElement | null>(null);
+	const mControls = useAnimation();
+
+	const mVariants: Variants = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				ease: "easeInOut",
+				duration: 2,
+			},
+		},
+	};
 
 	useIntersectionObserver(sectionElRef, {
 		threshold: 0.3,
-		onEnter: () =>
-			setNavCurrent(createNavData({ href: "#about", name: "About" })),
+		onEnter: () => {
+			setNavCurrent(createNavData({ href: "#about", name: "About" }));
+			mControls.start("visible");
+		},
 	});
 
 	return (
@@ -32,9 +47,16 @@ const About = ({ id }: AboutProps) => {
 					contentSubtitle="Software Engineer"
 					sideIllustration={`${AssetPaths.imgBase}/about-illustration.webp`}
 				/>
-				<Profile />
-				<Divider />
-				<Contact />
+				<motion.div
+					className={styles.textBox}
+					initial={"hidden"}
+					animate={mControls}
+					variants={mVariants}
+				>
+					<Profile />
+					<Divider />
+					<Contact />
+				</motion.div>
 			</div>
 		</section>
 	);

@@ -1,4 +1,5 @@
 import { ButtonBase } from "@mui/material";
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import SmoothScrollConfig from "../../../../configs/SmoothScrollConfig";
 import AssetPaths from "../../../../data/AssetPaths";
@@ -25,7 +26,12 @@ const ProjectInfo = ({ ...props }: ProjectInfoProps) => {
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.content}>
+			<motion.div
+				className={styles.content}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ ease: "easeInOut", duration: 1 }}
+			>
 				<div className={styles.infoCard}>
 					<div className={styles.title}>
 						<h1>{project.title}</h1>
@@ -60,7 +66,7 @@ const ProjectInfo = ({ ...props }: ProjectInfoProps) => {
 						alt=""
 					/>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

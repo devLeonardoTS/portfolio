@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import AssetPaths from "../../data/AssetPaths";
 
 import PageHrefs from "../../data/PageHrefs";
 import useScrollY from "../../hooks/useScrollY";
@@ -34,7 +35,14 @@ const Navbar = ({}: NavbarProps) => {
 		<nav className={styles.container} ref={navContainerRef}>
 			<div className={styles.content}>
 				<div className={styles.logo}>
-					<NavLink href={PageHrefs.home}>{"DevLTS Logo"}</NavLink>
+					<NavLink href={PageHrefs.home}>
+						<img
+							src={`${AssetPaths.imgBase}/devlts-logo.webp`}
+							alt="Dev LTS Logomark"
+							height={40}
+							width={40}
+						/>
+					</NavLink>
 				</div>
 				<div className={styles.interactions}>
 					<menu className={styles.linksMenu} ref={navLinksMenuRef}>

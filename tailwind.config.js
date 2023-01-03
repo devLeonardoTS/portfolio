@@ -20,8 +20,8 @@ module.exports = {
 		colors: {
 			black: "black",
 			white: "white",
-			"clr-primary": "#8AAEDC",
-			"clr-secondary": "#B1C9E8",
+			"clr-primary": "#B1C9E8",
+			"clr-secondary": "#8AAEDC",
 			"clr-accent": "#ffd39a",
 		},
 	},

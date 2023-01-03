@@ -44,34 +44,51 @@ function createProject(data: ProjectData): ProjectData {
 
 const projects: ProjectData[] = [
     createProject({
-        title: "Project 01",
+        title: "Project: Pets",
         heroImg: AssetPaths.slidePlaceholderImg,
-        category: "Web",
+        category: "Full-stack",
         devRole: "Designer & Developer",
-        objective: "Deliver a pleasant experience for either, desktop and mobile users."
+        objective: "A safe and reliable plataform to facilitate animal adoption and help environmental non-governmental organizations."
     }),
     createProject({
         title: "Croware Tech's Blog",
         heroImg: `${AssetPaths.imgBase}/croware-home.png`,
-        category: "Web API",
+        category: "Web",
         devRole: "Designer & Developer",
-        objective: "Grant a reliable source of data and processes to our clients.",
+        objective: "A blogging platform made by students to students with a focus on technology, culture and education.",
         details: {
-            challenge: "<p>Lorem ipsum dolor sit amet consectetur. Viverra ridiculus arcu arcu sed ultrices suscipit natoque adipiscing. Eget quisque molestie cursus imperdiet etiam sit lacus molestie ullamcorper. Facilisis ultricies sapien maecenas elementum venenatis dignissim. Felis platea integer nunc in diam. Lorem ipsum dolor sit amet consectetur. Viverra ridiculus arcu arcu sed ultrices suscipit natoque adipiscing. Eget quisque molestie cursus imperdiet etiam sit lacus molestie ullamcorper. Facilisis ultricies sapien maecenas elementum venenatis dignissim. Felis platea integer nunc in diam.</p>",
-            solution: "<p>Lorem ipsum dolor sit amet consectetur. Viverra ridiculus arcu arcu sed ultrices suscipit natoque adipiscing. Eget quisque molestie cursus imperdiet etiam sit lacus molestie ullamcorper. Facilisis ultricies sapien maecenas elementum venenatis dignissim. Felis platea integer nunc in diam.</p>",
-            features: "<p>Lorem ipsum dolor sit amet consectetur. Viverra ridiculus arcu arcu sed ultrices suscipit natoque adipiscing. Eget quisque molestie cursus imperdiet etiam sit lacus molestie ullamcorper. Facilisis ultricies sapien maecenas elementum venenatis dignissim. Felis platea integer nunc in diam.</p>",
-            colaborators: "<p>Lorem ipsum dolor sit amet consectetur. Viverra ridiculus arcu arcu sed ultrices suscipit natoque adipiscing. Eget quisque molestie cursus imperdiet etiam sit lacus molestie ullamcorper. Facilisis ultricies sapien maecenas elementum venenatis dignissim. Felis platea integer nunc in diam.</p>",
+            challenge: "<p>Build a blogging platform from scratch in 3 months, using modern web technologies without spending a single coin, all of this while learning how to work as a team with recently known people.</p>",
+            solution: `<ul>
+                <li>Used Kanban on Trello to visualize and delegate tasks</li>
+                <li>We used Next.JS as a framework</li>
+                <li>Hosted Strapi CMS on Render as back-end</li>
+                <li>Hosted PostgreSQL DB on Supabase</li>
+                <li>Learned a lot about keeping the user experience in mind while building a project</li>
+            </ul>`,
+            features: `<ul>
+                <li>Uncluttered publication pages</li>
+                <li>Custom profile for writers</li>
+                <li>Advanced text editor for writers</li>
+                <li>Easy to use administration panel</li>
+            </ul>`,
+            colaborators: `<ul>
+                <li><p><a href="#">Claudio D. S. N.</a> - Design</p></li>
+                <li><p><a href="https://www.linkedin.com/in/giovana-gama-41b8b3214/">Giovana S. G.</a> - Writer</p></li>
+                <li><p><a href="https://www.linkedin.com/in/devleonardots/">Leonardo T. S.</a> - Management</p></li>
+                <li><p><a href="#">Lucas G. A. R.</a> - Writer</p></li>
+                <li><p><a href="https://www.linkedin.com/in/vitor-alexandre-1487b121a/">Vitor A. A. P.</a> - Developer</p></li>
+            </ul>`,
         },
         showcaseImgs: [`${AssetPaths.imgBase}/croware-profile.png`, `${AssetPaths.imgBase}/croware-writer.png`, `${AssetPaths.imgBase}/croware-post-01.png`, `${AssetPaths.imgBase}/croware-post-02.png`],
         page: "https://croware-blog.vercel.app/"
 
     }),
     createProject({
-        title: "Project 03",
+        title: "Project: Skoonected",
         heroImg: AssetPaths.slidePlaceholderImg,
         category: "Full-stack",
         devRole: "Designer & Developer",
-        objective: "Ensure our clients are presenting the best of their businesses through digital means."
+        objective: "A platform tailored to suit the needs of small to medium schools, delivering better tools to students and masters."
     }),
 ];
 
